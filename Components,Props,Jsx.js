@@ -37,3 +37,22 @@ body{
     background-color: cadetblue;
 }
 
+//UserCard.jsx
+import React from 'react'
+import './UserCards.css'
+
+
+const UserCards = (props) => {
+  return (
+    <div className='user-container'>
+      <h3>{props.name}</h3>
+      <img className='user-image' src={props.image} alt="vk" />
+      <p>{props.team}</p>
+    </div>
+  )
+}
+
+export default UserCards
+
+//UserCard.css
+
