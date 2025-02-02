@@ -37,6 +37,7 @@ body{
     background-color: cadetblue;
 }
 
+//COMPONENTS.........................................................................
 //UserCard.jsx
 import React from 'react'
 import './UserCards.css'
@@ -55,4 +56,24 @@ const UserCards = (props) => {
 export default UserCards
 
 //UserCard.css
+.user-container{
+      height: 300px;
+      background-color: cornsilk;
+      padding: 20px;
+      border-radius: 10px;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+      
+}
+
+.user-image{
+    height: 60%;
+    width: 60%;
+    border-radius: 50%;
+    
+}
 
