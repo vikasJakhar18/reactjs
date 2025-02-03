@@ -32,3 +32,13 @@ export default function counter() {
 
 //Counter.css
 
+.counter{
+    background-color: #fff;
+    color: black;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: 2px solid black;
+}
+
