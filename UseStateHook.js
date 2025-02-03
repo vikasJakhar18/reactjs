@@ -14,6 +14,22 @@ function App() {
 
 export default App
 
+//index.css
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  background-color: antiquewhite;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 //Components.....................................................
 //Counter.jsx
 import React, { useState } from 'react'
