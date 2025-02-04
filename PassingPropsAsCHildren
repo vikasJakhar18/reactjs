@@ -1,4 +1,4 @@
-//App.jsx
+//App.jsx...............................
 import { useState } from 'react'
 import Button from './components/Button'
 import './App.css'
@@ -18,3 +18,17 @@ function App() {
 }
 
 export default App
+
+//index.css.............................
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
