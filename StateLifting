@@ -1,0 +1,23 @@
+//App.jsx.......................................
+
+import { useState } from 'react';
+import './App.css'
+import Card from './components/card';
+
+function App() {
+
+  //create state
+  //manage state
+  //change state
+  //sabhi child me state ko sync krvadunga
+
+  const [name , setName]=useState('');
+  return (
+  <div>
+    <Card title='card1' name={name} setName={setName}/>
+    <Card title='card2' name={name} setName={setName}/>
+  </div>
+  )
+}
+
+export default App
