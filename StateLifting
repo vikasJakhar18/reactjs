@@ -40,3 +40,19 @@ body{
   background-color: beige;
   color: black;
 }
+
+//Components...................................................
+//Card.jsx.....................................................
+
+import React from 'react'
+
+export default function card(props) {
+  return (
+    <div>
+      {props.title}
+   <input type='text' onChange={(e)=>props.setName(e.target.value)}/>
+   <p>Name state ki value inside card :{props.name}</p>
+    </div>
+  )
+}
+
