@@ -1,4 +1,4 @@
-//App.jsx
+//App.jsx----------------------------------------------------------------
 
 import { useState } from 'react'
 import './App.css'
@@ -45,3 +45,17 @@ return(
 }
 
 export default App
+
+//index.css------------------------------------------------------------
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  font-size: 25px;
+}
+
