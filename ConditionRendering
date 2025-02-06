@@ -1,0 +1,47 @@
+//App.jsx
+
+import { useState } from 'react'
+import './App.css'
+import LogoutBtn from './components/LogoutBtn';
+import LoginBtn from './components/LoginBtn';
+
+function App() {
+  const [isLoggedin, setLoggedin] = useState(true);
+
+
+return(
+ <div>
+  {isLoggedin && <LogoutBtn/>}
+ </div>
+
+)
+
+  
+  //USING TERNARY OPERATOR
+
+  //  return(
+
+  //   <div>
+  //     {isLoggedin ? <LogoutBtn/> : <LoginBtn/>}
+  //   </div>
+
+  //  )
+
+
+
+  //USING IF ELSE STATEMENT
+
+  // if (isLoggedin) {
+  //   return(
+  //   <LogoutBtn/>
+  //   )
+
+  // } else {
+  //   return(
+  //   <LoginBtn/>
+  //   )
+  // }
+
+}
+
+export default App
