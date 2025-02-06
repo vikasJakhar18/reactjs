@@ -55,6 +55,22 @@ body{
   align-items: center;
 }
 
+//Components------------------------------------------------------------
+//LoginBtn.jsx----------------------------------------------------------
+
+import React from 'react'
+
+export default function LoginBtn() {
+  return (
+    <button>
+        Login
+    </button>
+  )
+}
+
+//LogoutBtn.jsx------------------------------------------------------------
+
+
 button{
   font-size: 25px;
 }
