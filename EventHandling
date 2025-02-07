@@ -1,0 +1,44 @@
+//App.jsx---------------------------------------------------------------------
+
+
+import './App.css'
+
+function App() {
+
+  function handleClick(){
+     alert("button is clicked")
+  }
+
+  function handleMouseOver(){
+    alert("para ke upar aye ho...")
+  }
+
+  function handleOnChange(e){
+    console.log("value till now :",e.target.value)
+  }
+
+  function handleSubmit(e){
+    e.preventDefault();
+    alert("value submit krduu?");
+  }
+  return (
+    <div>
+      //its a immidiate envoke
+      <button onClick={alert("immidiate envoke")}>  
+        click me
+      </button>
+
+      {/* <form onSubmit={handleSubmit}>
+        <input type="text" onChange={handleOnChange} />
+        <button type='submit'>Submit</button>
+      </form>
+
+       <p onMouseOver={handleMouseOver}>I am a Para</p>
+     <button onClick={handleClick}>
+      click me!
+     </button>  */}
+    </div>
+  )
+}
+
+export default App
