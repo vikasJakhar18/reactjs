@@ -67,3 +67,31 @@ function App() {
 }
 
 export default App
+
+//Components---------------------------------------------------------------
+//LoggerComponent.jsx-----------------------------------------------------
+
+import React, { useEffect, useState } from 'react'
+
+export default function LoggerComponent() {
+   const [count,setCount]=useState(0);
+
+   //Runs on every render
+   useEffect(()=>{
+    console.log("component is rendered and count changed :",count)
+   })
+
+    function handleClick(){
+        setCount(count+1)
+    }
+
+  return (
+    <div>
+      <h1>Count is : {count}</h1>
+      <button onClick={handleClick}>
+        increament
+      </button>
+    </div>
+  )
+}
+
