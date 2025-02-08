@@ -95,3 +95,34 @@ export default function LoggerComponent() {
   )
 }
 
+//TimerComponent.jsx----------------------------------------------------------------
+
+import React, { useEffect, useState } from 'react'
+
+export default function TimerComponent() {
+
+    const [seconds,setSeconds]=useState(0);
+
+    //it will only run on first render
+
+    useEffect(()=>{
+      const intervalid= setInterval(() => {
+        console.log("setInterval executed")
+        setSeconds(prevSeconds => prevSeconds+1)
+      }, 1000);
+
+      return()=>{
+        console.log("timer is stopped")
+        clearInterval(intervalid);
+      }
+    },[])
+
+  return (
+    
+    <div>
+      <h1>Seconds : {seconds}</h1>
+    </div>
+  )
+}
+
+
