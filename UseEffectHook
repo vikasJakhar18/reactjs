@@ -125,4 +125,47 @@ export default function TimerComponent() {
   )
 }
 
+//MultiEffectComponent.jsx-------------------------------------------------------
+
+import React, { useEffect, useState } from 'react'
+
+export default function MultiEffectComponent() {
+
+    const [count,setCount]=useState(0);
+       const [seconds,setSeconds]=useState(0);
+
+       //side-effect logic whic runs when count is changed
+       useEffect(()=>{
+        console.log("component is rendered and count changed :",count)
+       },[count])
+
+
+       //runs only on first render
+        useEffect(()=>{
+             const intervalid= setInterval(() => {
+               console.log("setInterval executed")
+               setSeconds(prevSeconds => prevSeconds+1)
+             }, 1000);
+       
+             return()=>{
+               console.log("timer is stopped")
+               clearInterval(intervalid);
+             }
+           },[])
+    
+        function handleClick(){
+            setCount(count+1)
+        }
+  return (
+
+    <div>
+      <h1>Count is : {count}</h1>
+      <button onClick={handleClick}>
+        increament
+      </button>
+      <h1>Seconds : {seconds}</h1>
+    </div>
+  )
+}
+
 
