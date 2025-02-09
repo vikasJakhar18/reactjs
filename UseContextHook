@@ -36,3 +36,21 @@ function App() {
 export default App
 export { UserContext }
 export {ThemeContext}
+
+//App.css-------------------------------------------------------------------------
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+   height: 300px;
+   width: 300px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(26, 18, 8);
+   border: 2px solid black;
+}
