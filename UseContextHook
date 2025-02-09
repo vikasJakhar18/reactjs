@@ -54,3 +54,19 @@ body{
    background-color: rgb(26, 18, 8);
    border: 2px solid black;
 }
+
+//Components------------------------------------------------------------------------
+//ChildB.jsx------------------------------------------------------------------------
+
+import React from 'react'
+import ChildC from './ChildC'
+
+function ChildB() {
+  return (
+    <div>
+     <ChildC/>
+    </div>
+  )
+}
+
+export default ChildB
