@@ -70,3 +70,35 @@ function ChildB() {
 }
 
 export default ChildB
+
+//ChildC.jsx------------------------------------------------------------------------
+
+import React, { useContext } from 'react'
+import { ThemeContext,UserContext } from '../App'
+
+function ChildC() {
+    //step4
+    const User=useContext(UserContext)
+    const {theme,setTheme}=useContext(ThemeContext)
+
+    function toggleTheme(){
+        if (theme==="light") {
+            setTheme("dark")
+        } else {
+            setTheme("light")
+        }
+    }
+  return (
+    <div>
+  <button onClick={toggleTheme}>
+    change theme
+  </button><br />
+  name:{User}
+    </div>
+  )
+}
+
+export default ChildC
+
+
+
