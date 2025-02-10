@@ -150,7 +150,19 @@ function Home() {
 
 export default Home
 
-//About.jsx--------------------------------------------------------
+//Courses.jsx--------------------------------------------------------
+
+import React from 'react'
+
+function Courses() {
+  return (
+    <div>
+      Courses
+    </div>
+  )
+}
+
+export default Courses
 
 
 
