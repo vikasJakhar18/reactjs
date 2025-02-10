@@ -101,4 +101,29 @@ function About() {
 
 export default About
 
+//Home.jsx--------------------------------------------------------
+
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+
+function Home() {
+  //using useNavigate hook to move from one page to another page
+  const navigate=useNavigate();
+  function handleClick(){
+      navigate("\about")
+  }
+  return (
+    <div>
+      Home page
+      <button onClick={handleClick}>
+        Move to About Page
+      </button>
+    </div>
+  )
+}
+
+export default Home
+
+
+
 
