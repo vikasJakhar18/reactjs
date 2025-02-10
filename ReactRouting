@@ -76,3 +76,29 @@ function App() {
 }
 
 export default App
+
+//Components-------------------------------------------------------
+//About.jsx--------------------------------------------------------
+
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+
+function About() {
+  //using useNavigate hook to move from one page to another page
+  const navigate = useNavigate();
+  function handleClickPage() {
+    navigate("/")
+  }
+  return (
+    <div>
+      About page
+      <button onClick={handleClickPage}>
+        Move to home page
+      </button>
+    </div>
+  )
+}
+
+export default About
+
+
