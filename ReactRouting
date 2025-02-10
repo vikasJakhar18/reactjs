@@ -164,5 +164,55 @@ function Courses() {
 
 export default Courses
 
+//Reports.jsx--------------------------------------------------------
+
+import React from 'react'
+
+function Reports() {
+  return (
+    <div>
+      Reports
+    </div>
+  )
+}
+
+export default Reports
+
+//Dashboard.jsx--------------------------------------------------------
+
+import React from 'react'
+import { Outlet } from 'react-router-dom'
+
+function Dashboard() {
+  return (
+
+    //outlet should be in parent route element to render their child route element
+    <div>
+      Dashboard page
+      <Outlet/>
+    </div>
+  )
+}
+
+export default Dashboard
+
+//ParamComp.jsx--------------------------------------------------------
+
+import React from 'react'
+import { useParams } from 'react-router-dom'
+
+function ParamComp() {
+
+    const {id}= useParams();
+  return (
+    <div>
+      Params:{id}
+    </div>
+  )
+}
+
+export default ParamComp
+
+
 
 
