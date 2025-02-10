@@ -1,0 +1,78 @@
+//App.jsx-------------------------------------------------------
+
+import './App.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from './components/Home';
+import About from './components/About';
+import Dashboard from './components/Dashboard';
+import Navbar from './components/Navbar';
+import ParamComp from './components/ParamComp';
+import Courses from './components/Courses';
+import Reports from './components/Reports';
+import ErrorPage from './components/ErrorPage';
+
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <div>
+        <Navbar />
+        <Home />
+      </div>,
+    },
+
+    {
+      path: "/about",
+      element: <div>
+        <Navbar />
+        <About />
+      </div>,
+    },
+
+    {
+      path: "/dashboard",
+      element: <div>
+        <Navbar />
+        <Dashboard />
+      </div>,
+
+      //how to create Nested Route
+
+      children: [
+        {
+          path: "courses",
+          element: <Courses />
+        },
+        {
+          path: "reports",
+          element: <Reports />
+        }
+      ]
+    },
+
+    {
+
+      //how to send parameter 
+      //whatever we write after the /student/....  it works as id 
+      path: "/student/:id",
+      element: <div>
+        <Navbar />
+        <ParamComp />
+      </div>
+    },
+    {
+      path:"*",
+      element:<ErrorPage/>
+    }
+  ]
+)
+function App() {
+
+  return (
+    <div>
+      <RouterProvider router={router} />
+    </div>
+  )
+}
+
+export default App
