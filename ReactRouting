@@ -77,6 +77,32 @@ function App() {
 
 export default App
 
+//Navbar.jsx--------------------------------------------------------
+
+import React from 'react'
+import {Link,NavLink} from 'react-router-dom'
+
+function Navbar() {
+  return (
+    <div>
+      <ul>
+        <li>
+            <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+            <NavLink to="/about">about</NavLink>
+        </li>
+        <li>
+            <NavLink to="/dashboard">dashboard</NavLink>
+        </li>
+      </ul>
+    </div>
+  )
+}
+
+export default Navbar
+
+
 //Components-------------------------------------------------------
 //About.jsx--------------------------------------------------------
 
@@ -124,6 +150,7 @@ function Home() {
 
 export default Home
 
+//About.jsx--------------------------------------------------------
 
 
 
