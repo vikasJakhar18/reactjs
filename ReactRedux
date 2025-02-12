@@ -97,3 +97,22 @@ export const counterSlice = createSlice({
 export const { increment, decrement, incrementByAmount,reset} = counterSlice.actions
 
 export default counterSlice.reducer
+
+//store.jsx--------------------------------------------------------------------------
+
+//Step1:--------------------------------------------------
+import { configureStore } from '@reduxjs/toolkit'
+import counterReducer from '../features/counter/CounterSlice.js'
+
+export const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+  },
+})
+
+//steps:
+// create a store
+// wrap app component under Provider
+// create a slice
+// register reducer in store 
+
