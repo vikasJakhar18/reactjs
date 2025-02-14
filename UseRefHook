@@ -1,0 +1,96 @@
+//App.jsx--------------------------------------------------------------
+
+
+import { useEffect, useRef, useState } from 'react'
+import './App.css'
+
+function App() {
+
+  // const [count, setCount] = useState(0);
+
+  // // step1: create a reference
+  // let btnRef = useRef();
+
+  // let value = useRef(0);
+
+  // function handleIncrement() {
+  //   value.current = value.current + 1;
+  //   console.log("value is:", value.current);
+  //   setCount(count + 1);
+  // }
+
+  // //it runs on every render
+  // useEffect(() => {
+  //   console.log("main firse render hogya hu")
+  // })
+
+  // function handleColorChange(){
+  //   //step3:ref.current field ka use krke koi bhi property change kr skte h
+  //    btnRef.current.style.backgroundColor="blue";
+  // }
+
+  const [timer, setTimer]=useState(0);
+  let timerRef=useRef(null);
+
+  function startTimer(){
+    timerRef.current= setInterval(() => {
+      setTimer(timer=>timer+1)
+    }, 1000);
+  }
+  
+  function stopTimer(){
+    clearInterval(timerRef.current);
+    timerRef.current=null;
+  }
+  
+  function resetTimer(){
+    stopTimer();
+    setTimer(0);
+  }
+
+  return (
+    <div>
+
+      <h1>StopWatch : {timer} Seconds</h1>
+
+      <button onClick={startTimer}>
+        Start
+      </button>
+      <br /><br />
+
+      
+      <button onClick={stopTimer}>
+        Stop
+      </button>
+      <br /><br />
+
+      
+      <button onClick={resetTimer}>
+        Reset
+      </button>
+
+
+      {/* <button
+      //step2: link the refernce
+        ref={btnRef}
+        onClick={handleIncrement}>
+        increment
+      </button>
+      <br />
+
+      <button
+        onClick={handleColorChange}>
+        change color of first btn
+      </button>
+      <br />
+
+      <div>
+        count:{count}
+      </div> */}
+
+    </div>
+
+  )
+}
+
+export default App
